@@ -1,7 +1,7 @@
-# ***BÀI TẬP VỀ NHÀ 05, Môn Hệ quản trị csdl.***
-# ***Nguyễn Văn Thứ_K225480106062_K58KTP.***
-# ***SUBJECT: Trigger on mssql***
-# ***Đề tài phân tích và thiết kế hệ thống quản lí nhà hàng Quán cay Đức Huệ***
+# <p align="center">***BÀI TẬP VỀ NHÀ 05, Môn Hệ quản trị csdl.***</p>
+# <p align="center">***Nguyễn Văn Thứ_K225480106062_K58KTP.***</p>
+# <p align="center">***SUBJECT: Trigger on mssql***</p>
+# <p align="center">***Đề tài phân tích và thiết kế hệ thống quản lí nhà hàng Quán cay Đức Huệ***</p>
 
 # A. Trình bày lại đầu bài của đồ án PT&TKHT:
 1. Mô tả bài toán của đồ án PT&TKHT, 
@@ -49,7 +49,7 @@
    Paste link này vào file excel online ghim trên nhóm.
    Thầy sẽ dùng tool để check các link này.
 
-# ***DEADLINE: 23H59:59 NGÀY 23/04/2025***
+# <p align="center">***DEADLINE: 23H59:59 NGÀY 23/04/2025***</p>
 
 p/s:
  - Sv được phép tham khảo mọi nguồn, nhưng phải tự làm lại.  
@@ -85,7 +85,18 @@ Diagram cho database QUANLYNHAHANG.
 ![Ảnh chụp màn hình 2025-04-23 210515](https://github.com/user-attachments/assets/7e36e2cb-f135-4afe-9a42-d27d14db6f97)
 
 ## 2. Yêu cầu bài tập 05
-Viết thêm Trigger cho các bảng để đạt được yêu cầu bài toán:
-Ở đây em sẽ thêm trường tổng thanh toán vào bảng HoaDon như hình.
-![Ảnh chụp màn hình 2025-04-23 220345](https://github.com/user-attachments/assets/9403f001-b23d-4ea6-8a89-4deea6a5fb43)
+Viết thêm Trigger cho các bảng để đạt được yêu cầu bài toán: Và bổ sung thêm trường phi chuẩn nhằm mục tiêu tăng tốc truy vấn, giảm tính toán động, lưu giữ giá trị thanh toán lịch sử và hỗ trợ thống kê thanh toán một cách hiệu quả và nhanh chóng.
 
+Ở đây em sẽ thêm trường tongthanhtoan vào bảng HoaDon như hình.
+![Ảnh chụp màn hình 2025-04-23 220345](https://github.com/user-attachments/assets/9403f001-b23d-4ea6-8a89-4deea6a5fb43)
+Viết trigger cho bảng HoaDon để đạt được yêu cầu tính tongthanhtoan cho bảng HoaDon.
+![Ảnh chụp màn hình 2025-04-23 225021](https://github.com/user-attachments/assets/2d40725d-0433-419c-81be-f90b95e5f14d)
+Tạo trigger riêng cho bảng HoaDon với trường tongthanhtoan.
+![Ảnh chụp màn hình 2025-04-23 221850](https://github.com/user-attachments/assets/3329e4bd-a84c-4152-9660-e1894601eda1)
+Thêm dữ liệu cho bảng HoaDon để tính tongthanhtoan.
+![Ảnh chụp màn hình 2025-04-23 224338](https://github.com/user-attachments/assets/04536a40-db97-49ef-b1cf-4fa0a56cce08)
+Chạy lệnh test và kết quả đạt được như hình.
+![Ảnh chụp màn hình 2025-04-23 224402](https://github.com/user-attachments/assets/177c0bed-4f8b-4f61-81d5-be7e5adada51)
++ Kết luận: Trigger đã giúp tự động cập nhật cột tongthanhtoan trong bảng HoaDon mỗi khi thêm hoặc sửa dữ liệu, đảm bảo tính chính xác và toàn vẹn dữ liệu. Việc sử dụng trigger giúp hệ thống vận hành nhanh chóng, giảm lỗi nhập liệu và tăng tính chuyên nghiệp cho đồ án.
+
+# <p align="center">***HẾT***</p>
