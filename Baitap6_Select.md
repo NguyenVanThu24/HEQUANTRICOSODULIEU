@@ -21,7 +21,7 @@
 1. Hãy nêu các bước để import được dữ liệu trong sv_tnut.sql vào sql server của em.
 + Để import dữ liệu trong sv_tnut.sql vào: Đầu tiên em sẽ thực hiện dowload file sv_tnut.sql về vị trí lưu trữ, khởi động SQl Server và thao tác tạo 1 database mang tên SV_TNUT lên. Và mở file sv_tnut.sql vừa dowload -> Execute toàn bộ file sv_tnut.sql vừa mở lên. Và em đã đạt được kết quả như 2 hình bên dưới.
 ![Ảnh chụp màn hình 2025-04-24 205834](https://github.com/user-attachments/assets/96c7acbf-4a8c-4b29-afbc-9b8266b44120)
-Hình dưới đây là bảng dữ liệu mà được import từ file sv_tnut.sql trên.
+Hình dưới đây là bảng dữ liệu db.SV mà được import từ file sv_tnut.sql trên.
 ![Ảnh chụp màn hình 2025-04-24 210600](https://github.com/user-attachments/assets/c6742ffb-ae9b-46b7-b28b-4a93f9844024)
 
 2. dữ liệu đầu vào là tên của sv; sđt; ngày, tháng, năm sinh của sinh viên (của sv đang làm bài tập này).
