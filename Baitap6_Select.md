@@ -70,6 +70,6 @@ ORDER BY ten, hodem COLLATE Vietnamese_CI_AS:
 + COLLATE Vietnamese_CI_AS: đảm bảo sắp xếp theo bảng chữ cái tiếng Việt, ví dụ: A < Á < Â < B < C ... < Đ < E ... < Z. Dung sẽ đứng trước Đạt nếu dùng kiểu sắp xếp tiếng Việt.
 ![Ảnh chụp màn hình 2025-04-24 221309](https://github.com/user-attachments/assets/3d4ee006-2e11-4385-87ec-769732961c20)
 
-10. HÃY NHẬP SQL ĐỂ LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV (TRÌNH BÀY QUÁ TRÌNH SUY NGHĨ VÀ GIẢI NHỮNG VỨNG MẮC)
+10. HÃY NHẬP SQL ĐỂ LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV (TRÌNH BÀY QUÁ TRÌNH SUY NGHĨ VÀ GIẢI NHỮNG VỨNG MẮC).
 Em đang tiếp tục tìm hiểu và chưa thể có hướng giải quyết tại thời điểm này.
 # <p align="center">***THE END***</p>
