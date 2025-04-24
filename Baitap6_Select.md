@@ -56,11 +56,20 @@ Em sử dụng thêm lệnh điều kiện để loại bỏ chính mình và k�
 Để tìm ra những sinh viên có sdt sai khác chỉ 1 số so với sdt của em thì đầu tiên vần đảm bảo điều kiện LEN(sdt) = 10 đảm bảo số điện thoại có độ dài chuẩn 10 số để so sánh.
 + Em sử dụng CASE WHEN ... THEN 1 ELSE 0 END: biến TRUE/FALSE thành số 1 hoặc 0 để cộng tổng.
 + Và COLLATE Latin1_General_BIN: dùng để so sánh từng ký tự một cách chính xác (case-sensitive & binary) = 1: nghĩa là chỉ khác đúng 1 số trong toàn bộ 10 số.
-Và két quả trả về không có sinh viên nào thỏa mãn yên cầu.
+-> Và kết quả trả về không có sinh viên nào thỏa mãn yên cầu.
 ![Ảnh chụp màn hình 2025-04-24 215936](https://github.com/user-attachments/assets/b86cf9b6-df54-487a-aa5e-88a88756e8f5)
 
 9. BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH.
+***Giải thích để liệt kê tất cả sinh viên ngành KMT, sắp xếp theo tên và họ đệm, kiểu tiếng việt***
+WHERE lop LIKE '%KMT%':
++ Lọc ra các sinh viên thuộc ngành Kỹ thuật Máy Tính (KMT)
++ Giả sử lop có chứa mã ngành trong tên lớp (ví dụ: K58KTP, K57KMT, K59KMT, K60KMT,...)
+ORDER BY ten, hodem COLLATE Vietnamese_CI_AS:
++ ORDER BY ten: sắp xếp theo tên riêng trước (ví dụ: An, Bình, Đức,...).
++ Sau đó ORDER BY hodem: sắp xếp theo họ và đệm nếu tên trùng
++ COLLATE Vietnamese_CI_AS: đảm bảo sắp xếp theo bảng chữ cái tiếng Việt, ví dụ: A < Á < Â < B < C ... < Đ < E ... < Z. Dung sẽ đứng trước Đạt nếu dùng kiểu sắp xếp tiếng Việt.
+![Ảnh chụp màn hình 2025-04-24 221309](https://github.com/user-attachments/assets/3d4ee006-2e11-4385-87ec-769732961c20)
 
 10. HÃY NHẬP SQL ĐỂ LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV (TRÌNH BÀY QUÁ TRÌNH SUY NGHĨ VÀ GIẢI NHỮNG VỨNG MẮC)
-
+Em đang tiếp tục tìm hiểu và chưa thể có hướng giải quyết tại thời điểm này.
 # <p align="center">***THE END***</p>
