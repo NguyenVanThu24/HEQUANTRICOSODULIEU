@@ -45,10 +45,19 @@ Em sử dụng thêm lệnh điều kiện để loại bỏ chính mình và k�
 ![Ảnh chụp màn hình 2025-04-24 214711](https://github.com/user-attachments/assets/e00b4863-a864-4e62-bb29-513294383fb1)
 
 6. nhập sql để tìm xem có những sv nào trùng tên với em?
+Để tìm các sinh viên trùng tên với em (tên là "Thứ"), em đã sử dụng lệnh truy vấn theo cột "ten" trong bảng SV.
+![Ảnh chụp màn hình 2025-04-24 215210](https://github.com/user-attachments/assets/a7bf2cfc-f00d-4c21-a5ae-2a049ad2aa1d)
 
 7. nhập sql để tìm xem có những sv nào trùng họ và tên đệm với em.
+Để tìm các sinh viên trùng họ và tên đệm với em (tức là hodem = 'Nguyễn Văn'), em truy vấn theo cột "hodem" trong bảng SV.
+![Ảnh chụp màn hình 2025-04-24 215527](https://github.com/user-attachments/assets/22cd51e4-ee1e-484f-920a-7e349fd7f7af)
 
 8. nhập sql để tìm xem có những sv nào có sđt sai khác chỉ 1 số so với sđt của em.
+Để tìm ra những sinh viên có sdt sai khác chỉ 1 số so với sdt của em thì đầu tiên vần đảm bảo điều kiện LEN(sdt) = 10 đảm bảo số điện thoại có độ dài chuẩn 10 số để so sánh.
++ Em sử dụng CASE WHEN ... THEN 1 ELSE 0 END: biến TRUE/FALSE thành số 1 hoặc 0 để cộng tổng.
++ Và COLLATE Latin1_General_BIN: dùng để so sánh từng ký tự một cách chính xác (case-sensitive & binary) = 1: nghĩa là chỉ khác đúng 1 số trong toàn bộ 10 số.
+Và két quả trả về không có sinh viên nào thỏa mãn yên cầu.
+![Ảnh chụp màn hình 2025-04-24 215936](https://github.com/user-attachments/assets/b86cf9b6-df54-487a-aa5e-88a88756e8f5)
 
 9. BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH.
 
