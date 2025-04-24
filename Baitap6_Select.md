@@ -56,11 +56,14 @@ Em sử dụng thêm lệnh điều kiện để loại bỏ chính mình và k�
 Để tìm ra những sinh viên có sdt sai khác chỉ 1 số so với sdt của em thì đầu tiên vần đảm bảo điều kiện LEN(sdt) = 10 đảm bảo số điện thoại có độ dài chuẩn 10 số để so sánh.
 + Em sử dụng CASE WHEN ... THEN 1 ELSE 0 END: biến TRUE/FALSE thành số 1 hoặc 0 để cộng tổng.
 + Và COLLATE Latin1_General_BIN: dùng để so sánh từng ký tự một cách chính xác (case-sensitive & binary) = 1: nghĩa là chỉ khác đúng 1 số trong toàn bộ 10 số.
--> Và kết quả trả về không có sinh viên nào thỏa mãn yên cầu.
+
+-> Và kết quả trả về không có sinh viên nào thỏa mãn yên cầu. Sau một lúc ngồi tìm hiểu lại thì cá nhân em có nhận ra rằng là "sdt" của tất cả các bạn sinh viên đang không thỏa mãn điều kiện là 10 số và đều không có số 0 ở đầu số -> Bởi vậy nên rất khó để có thể tìm ra được kết quả như mong muốn.
 ![Ảnh chụp màn hình 2025-04-24 215936](https://github.com/user-attachments/assets/b86cf9b6-df54-487a-aa5e-88a88756e8f5)
 
 9. BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH.
+
 ***Giải thích để liệt kê tất cả sinh viên ngành KMT, sắp xếp theo tên và họ đệm, kiểu tiếng việt***
+
 WHERE lop LIKE '%KMT%':
 + Lọc ra các sinh viên thuộc ngành Kỹ thuật Máy Tính (KMT)
 + Giả sử lop có chứa mã ngành trong tên lớp (ví dụ: K58KTP, K57KMT, K59KMT, K60KMT,...)
@@ -71,5 +74,14 @@ ORDER BY ten, hodem COLLATE Vietnamese_CI_AS:
 ![Ảnh chụp màn hình 2025-04-24 221309](https://github.com/user-attachments/assets/3d4ee006-2e11-4385-87ec-769732961c20)
 
 10. HÃY NHẬP SQL ĐỂ LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV (TRÌNH BÀY QUÁ TRÌNH SUY NGHĨ VÀ GIẢI NHỮNG VỨNG MẮC).
-Em đang tiếp tục tìm hiểu và chưa thể có hướng giải quyết tại thời điểm này.
-# <p align="center">***THE END***</p>
+Em đang tiếp tục tìm hiểu và chưa thể có hướng giải quyết triệt để tại thời điểm này.
++ Do trong db.SV không có trường "gioitinh" làm cơ sở để phân biệt nam nữ nên việc tìm ra kết quả triệt để cuối cùng là rất khó. Em nghĩ nếu phân biệt chỉ dựa vào tên hoặc họ đệm thì cũng là một phương án nhưng để đảm bảo tính tối ưu thì chưa có, bởi nhiều tên nam nữ cũng có thể dùng chúng chẳng hạn như ngay lớp em tên "Linh" thì cả bạn nam và nữ đều có thì nó rơi vào trường hợp đặc biệt, còn đối với tên nữ phổ thông khác mà không gặp ở giới nam thì sẽ dễ dàng tìm hơn nhưng không hoàn toàn là không thể trùng.
+
+-> Các phương án khả thi nhưng thiếu chắc chắn:
++ Hay là lọc sinh viên nữ bằng cách tìm trong họ tên chứa từ khóa gợi ý giới tính (ho_ten LIKE '%Thị%', hoặc thêm các tên khác nếu muốn mở rộng).
++ Hoặc là cách không chắc chắn tuyệt đối, nhưng có thể dùng heuristics (phán đoán) như:
+Các tên bắt đầu bằng: Nguyễn Thị, Lê Thị, Phạm Thị → có thể là nữ
+Các tên có chữ đệm phổ biến của nữ: Thị, Diễm, Mai, Ngọc, Lan, Hồng, ...
+
+👉 Lưu ý: Đây chỉ là một tróng các cách ước lượng, không chính xác 100%, nhưng trong trường hợp không có trường giới tính, nó là phương pháp khả thi nhất. Vì vậy em sẽ tiếp tục tìm hiểu và tham khảo thêm ý kiến ạ.
+# <p align="center">***--- THE END ---***</p>
