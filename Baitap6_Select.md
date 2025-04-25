@@ -25,30 +25,36 @@ Hình dưới đây là bảng dữ liệu db.SV mà được import từ file s
 ![Ảnh chụp màn hình 2025-04-24 210600](https://github.com/user-attachments/assets/c6742ffb-ae9b-46b7-b28b-4a93f9844024)
 
 2. dữ liệu đầu vào là tên của sv; sđt; ngày, tháng, năm sinh của sinh viên (của sv đang làm bài tập này).
+
 Đây là việc em tự dùng câu lệnh insert chèn thêm thông tin cá nhân của mình vào bảng SV và cho ra kết quả trong hình.
 ![Ảnh chụp màn hình 2025-04-24 211909](https://github.com/user-attachments/assets/98574d97-2045-40ec-ada3-92bf67ab9418)
 Tiếp theo em sử dụng câu lệnh select để tìm và kiểm tra thông tin liên quan về mình thông qua trường "hodem" và "ten" và kết quả in ra đạt được như hình.
 ![Ảnh chụp màn hình 2025-04-24 211944](https://github.com/user-attachments/assets/7a5da38c-da71-4c99-afdf-453bb3e571d4)
 
 3. nhập sql để tìm xem có những sv nào trùng hoàn toàn ngày/tháng/năm với em?
+
 Sử dụng câu lệnh select dùng trường thông tin "ns" để tìm những sinh viên trùng hoàn toàn ngày/tháng/năm với em.
 ![Ảnh chụp màn hình 2025-04-24 213115](https://github.com/user-attachments/assets/53a08faa-2fc8-4370-88de-6f26e1944676)
 Em sử dụng thêm lệnh điều kiện để loại bỏ chính mình và kết quả đã được như mong muốn.
 ![Ảnh chụp màn hình 2025-04-24 213131](https://github.com/user-attachments/assets/bcc4093d-797c-4117-bbb7-9ec8115378e3)
 
 4. nhập sql để tìm xem có những sv nào trùng ngày và tháng sinh với em?
+
 Để tìm những sinh viên có cùng ngày và tháng sinh với em (nhưng không cần cùng năm), em đã sử dụng hàm DAY() và MONTH() trong SQL để truy vấn ra kết quả như mong muốn.
 ![Ảnh chụp màn hình 2025-04-24 214411](https://github.com/user-attachments/assets/ff1c53db-a470-44c2-a896-462098df53ed)
 
 5. nhập sql để tìm xem có những sv nào trùng tháng và năm sinh với em?
+
 Để tìm các sinh viên trùng tháng và năm sinh với em (tháng 6 năm 2004), em đã sử dụng hàm MONTH() và YEAR() trong SQL để truy vấn.
 ![Ảnh chụp màn hình 2025-04-24 214711](https://github.com/user-attachments/assets/e00b4863-a864-4e62-bb29-513294383fb1)
 
 6. nhập sql để tìm xem có những sv nào trùng tên với em?
+
 Để tìm các sinh viên trùng tên với em (tên là "Thứ"), em đã sử dụng lệnh truy vấn theo cột "ten" trong bảng SV.
 ![Ảnh chụp màn hình 2025-04-24 215210](https://github.com/user-attachments/assets/a7bf2cfc-f00d-4c21-a5ae-2a049ad2aa1d)
 
 7. nhập sql để tìm xem có những sv nào trùng họ và tên đệm với em.
+
 Để tìm các sinh viên trùng họ và tên đệm với em (tức là hodem = 'Nguyễn Văn'), em truy vấn theo cột "hodem" trong bảng SV.
 ![Ảnh chụp màn hình 2025-04-24 215527](https://github.com/user-attachments/assets/22cd51e4-ee1e-484f-920a-7e349fd7f7af)
 
